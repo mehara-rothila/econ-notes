@@ -10,10 +10,11 @@ const StyledLabel = styled(Label)`
   fill: ${props => props.fill || '#333'};
 `;
 
-const StyledAxisLabel = styled(Label)`
-  font-size: 14px;
-  fill: #555;
-`;
+// Unused styled component - commenting out
+// const StyledAxisLabel = styled(Label)`
+//   font-size: 14px;
+//   fill: #555;
+// `;
 
 // --- Graph Data & Pre-calculated Values ---
 
@@ -28,22 +29,25 @@ const P_star_q1_v = 107.5;
 const Q_star_q1_v = 750;
 
 // Q1 Graph Data (Simplified - define points to show curve shapes)
-const graphData_q1_iv = [
-    { Q: 0, P_demand: 135, P_supply: 75 },
-    { Q: Qs_diseq_q1, P_supply_point: P_diseq_q1 }, // Point for Qs=0 at P=75
-    { Q: Q_star_q1, P_demand: P_star_q1, P_supply: P_star_q1 },
-    { Q: Qd_diseq_q1, P_demand_point: P_diseq_q1 }, // Point for Qd=1200 at P=75
-    { Q: 1350, P_demand: 0, P_supply: 142.5 }, // Demand intercept Q=1350 when P=0 is wrong (Qd=0 when P=135)
-    // Correct intercepts: Qd=0 at P=135; Qs=0 at P=75
-];
+// Unused variable - commenting out
+// const graphData_q1_iv = [
+//     { Q: 0, P_demand: 135, P_supply: 75 },
+//     { Q: Qs_diseq_q1, P_supply_point: P_diseq_q1 }, // Point for Qs=0 at P=75
+//     { Q: Q_star_q1, P_demand: P_star_q1, P_supply: P_star_q1 },
+//     { Q: Qd_diseq_q1, P_demand_point: P_diseq_q1 }, // Point for Qd=1200 at P=75
+//     { Q: 1350, P_demand: 0, P_supply: 142.5 }, // Demand intercept Q=1350 when P=0 is wrong (Qd=0 when P=135)
+//     // Correct intercepts: Qd=0 at P=135; Qs=0 at P=75
+// ];
+
 // Q1(v) Graph Data
-const graphData_q1_v = [
-     // Define points covering original and new lines/equilibria
-     { Q: 0, P_d0: 135, P_s0: 75, P_d1: 145, P_s1: 70},
-     { Q: Q_star_q1, P_d0: P_star_q1, P_s0: P_star_q1, P_d1: 115, P_s1: 85},
-     { Q: Q_star_q1_v, P_d0: 97.5, P_s0: 112.5, P_d1: P_star_q1_v, P_s1: P_star_q1_v},
-     { Q: 1000, P_d0: 85, P_s0: 125, P_d1: 95, P_s1: 120 },
-];
+// Unused variable - commenting out
+// const graphData_q1_v = [
+//      // Define points covering original and new lines/equilibria
+//      { Q: 0, P_d0: 135, P_s0: 75, P_d1: 145, P_s1: 70},
+//      { Q: Q_star_q1, P_d0: P_star_q1, P_s0: P_star_q1, P_d1: 115, P_s1: 85},
+//      { Q: Q_star_q1_v, P_d0: 97.5, P_s0: 112.5, P_d1: P_star_q1_v, P_s1: P_star_q1_v},
+//      { Q: 1000, P_d0: 85, P_s0: 125, P_d1: 95, P_s1: 120 },
+// ];
 
 // Q2 Values
 const P_star_q2 = 42;
@@ -65,12 +69,13 @@ const Q_star_q4 = 380;
 const P_star_q4_ii = 80;
 const Q_star_q4_ii = 440;
 // Q4 Graph Data
-const graphData_q4_iii = [
-    { Q: 0, P_d0: 250, P_s0: -66.7, P_d1: 300 }, // P-intercepts
-    { Q: Q_star_q4, P_eq0: P_star_q4 }, // Old Eq
-    { Q: Q_star_q4_ii, P_eq1: P_star_q4_ii }, // New Eq
-    { Q: 500, P_d0: 0, P_s0: 100, P_d1: 50 }, // Q-intercepts D0=500, D1=600; S=200 at P=0
-];
+// Unused variable - commenting out
+// const graphData_q4_iii = [
+//     { Q: 0, P_d0: 250, P_s0: -66.7, P_d1: 300 }, // P-intercepts
+//     { Q: Q_star_q4, P_eq0: P_star_q4 }, // Old Eq
+//     { Q: Q_star_q4_ii, P_eq1: P_star_q4_ii }, // New Eq
+//     { Q: 500, P_d0: 0, P_s0: 100, P_d1: 50 }, // Q-intercepts D0=500, D1=600; S=200 at P=0
+// ];
 
 // Q5 Values
 const P_star_q5 = (500/6).toFixed(2); // approx 83.33
@@ -82,12 +87,13 @@ const Qd_diseq_q5_v = 470;
 const Qs_diseq_q5_v = 590;
 const surplus_q5_v = 120;
 // Q5 Graph Data
-const graphData_q5_iii = [
-    { Q: 0, P_d0: 200, P_s0: -150, P_d1: 237.5, P_s1: -175 }, // P-intercepts
-    { Q: parseFloat(Q_star_q5), P_eq0: parseFloat(P_star_q5) }, // Old Eq
-    { Q: Q_star_q5_ii, P_eq1: P_star_q5_ii }, // New Eq
-    { Q: 800, P_d0: 0, P_s0: 250, P_d1: 37.5, P_s1: 225 }, // Q-intercepts D0=800, D1=950; S0=300, S1=350 at P=0
-];
+// Unused variable - commenting out
+// const graphData_q5_iii = [
+//     { Q: 0, P_d0: 200, P_s0: -150, P_d1: 237.5, P_s1: -175 }, // P-intercepts
+//     { Q: parseFloat(Q_star_q5), P_eq0: parseFloat(P_star_q5) }, // Old Eq
+//     { Q: Q_star_q5_ii, P_eq1: P_star_q5_ii }, // New Eq
+//     { Q: 800, P_d0: 0, P_s0: 250, P_d1: 37.5, P_s1: 225 }, // Q-intercepts D0=800, D1=950; S0=300, S1=350 at P=0
+// ];
 
 
 function TutorialSolutions() {
@@ -199,7 +205,7 @@ function TutorialSolutions() {
                             <YAxis type="number" name="Price"
                                 label={{ value: 'Price ($)', angle: -90, position: 'insideLeft', offset: -5 }}
                                 domain={[60, 150]} ticks={[P_diseq_q1, P_star_q1, 135, 150]}/>
-                            <Tooltip />
+                           <Tooltip />
                             <Legend verticalAlign="top" />
 
                             <Line type="monotone" dataKey="P" data={q1_D_Data} stroke="#2980b9" strokeWidth={2} name="Demand (D)" dot={false}/>
@@ -349,109 +355,109 @@ function TutorialSolutions() {
                     <ResponsiveContainer width="100%" height={400}>
                        <LineChart margin={{ top: 20, right: 40, left: 10, bottom: 40 }}>
                             <CartesianGrid strokeDasharray="3 3" />
-                             <XAxis dataKey="Q" type="number" name="Quantity"
-                                label={{ value: 'Quantity (Millions TB)', position: 'insideBottom', offset: -25 }}
-                                domain={[0, 600]} ticks={[0, 200, Q_star_q4, Q_star_q4_ii, 600]} />
-                             <YAxis type="number" name="Price"
-                                label={{ value: 'Price ($)', angle: -90, position: 'insideLeft', offset: -5 }}
-                                domain={[0, 310]} ticks={[0, P_star_q4, P_star_q4_ii, 250, 300]}/>
-                             <Tooltip />
-                             <Legend verticalAlign="top" />
+                            <XAxis dataKey="Q" type="number" name="Quantity"
+                               label={{ value: 'Quantity (Millions TB)', position: 'insideBottom', offset: -25 }}
+                               domain={[0, 600]} ticks={[0, 200, Q_star_q4, Q_star_q4_ii, 600]} />
+                            <YAxis type="number" name="Price"
+                               label={{ value: 'Price ($)', angle: -90, position: 'insideLeft', offset: -5 }}
+                               domain={[0, 310]} ticks={[0, P_star_q4, P_star_q4_ii, 250, 300]}/>
+                            <Tooltip />
+                            <Legend verticalAlign="top" />
 
-                            {/* Lines */}
-                            <Line type="linear" dataKey="P" data={q4_D0_Data} stroke="#a9cce3" strokeWidth={1.5} name="D0" dot={false}/>
-                            <Line type="linear" dataKey="P" data={q4_S_Data} stroke="#d35400" strokeWidth={2} name="S" dot={false}/>
-                            <Line type="linear" dataKey="P" data={q4_D1_Data} stroke="#2980b9" strokeWidth={2.5} name="D1" dot={false}/>
+                           {/* Lines */}
+                           <Line type="linear" dataKey="P" data={q4_D0_Data} stroke="#a9cce3" strokeWidth={1.5} name="D0" dot={false}/>
+                           <Line type="linear" dataKey="P" data={q4_S_Data} stroke="#d35400" strokeWidth={2} name="S" dot={false}/>
+                           <Line type="linear" dataKey="P" data={q4_D1_Data} stroke="#2980b9" strokeWidth={2.5} name="D1" dot={false}/>
 
-                            {/* Equilibria */}
-                            <ReferenceLine x={Q_star_q4} stroke="grey" strokeDasharray="2 2" />
-                            <ReferenceLine y={P_star_q4} stroke="grey" strokeDasharray="2 2" />
-                            <circle cx={Q_star_q4} cy={P_star_q4} r={4} fill="grey" />
-                             <StyledLabel value={`E0`} position="right" fill="grey" x={Q_star_q4} y={P_star_q4-10} />
+                           {/* Equilibria */}
+                           <ReferenceLine x={Q_star_q4} stroke="grey" strokeDasharray="2 2" />
+                           <ReferenceLine y={P_star_q4} stroke="grey" strokeDasharray="2 2" />
+                           <circle cx={Q_star_q4} cy={P_star_q4} r={4} fill="grey" />
+                            <StyledLabel value={`E0`} position="right" fill="grey" x={Q_star_q4} y={P_star_q4-10} />
 
-                            <ReferenceLine x={Q_star_q4_ii} stroke="green" strokeDasharray="3 3" />
-                            <ReferenceLine y={P_star_q4_ii} stroke="green" strokeDasharray="3 3" />
-                             <circle cx={Q_star_q4_ii} cy={P_star_q4_ii} r={5} fill="#27ae60" />
-                             <StyledLabel value={`E1`} position="right" fill="green" x={Q_star_q4_ii} y={P_star_q4_ii-10} />
+                           <ReferenceLine x={Q_star_q4_ii} stroke="green" strokeDasharray="3 3" />
+                           <ReferenceLine y={P_star_q4_ii} stroke="green" strokeDasharray="3 3" />
+                            <circle cx={Q_star_q4_ii} cy={P_star_q4_ii} r={5} fill="#27ae60" />
+                            <StyledLabel value={`E1`} position="right" fill="green" x={Q_star_q4_ii} y={P_star_q4_ii-10} />
 
-                       </LineChart>
-                    </ResponsiveContainer>
-                     <p>Graph showing initial (E0) and new (E1) equilibria for cloud market.</p>
-                </div>
-             </div>
-
-             {/* Question 05 Block */}
-            <div className="question-block">
-                <h2>Question 05: 5G Smartphone Market</h2>
-                <p>Initial: Demand: <code className="formula">Qd = 800 - 4P</code>; Supply: <code className="formula">Qs = 300 + 2P</code></p>
-
-                <h4>i. Find initial equilibrium (P*, Q*).</h4>
-                <p>Set Qd = Qs: <code className="calculation">800 - 4P = 300 + 2P => 500 = 6P => P* = 500/6 ≈ {P_star_q5}</code></p>
-                <p>Substitute P*: <code className="calculation">Q* = 300 + 2*(500/6) ≈ {Q_star_q5}</code></p>
-                <p><b>Initial Equilibrium: P* ≈ ${P_star_q5}, Q* ≈ {Q_star_q5} million phones</b></p>
-
-                <h4>ii. Find new equilibrium after demand increases by 150m, supply increases by 50m.</h4>
-                <p>New Demand: <code className="formula">Qd' = (800 - 4P) + 150 = 950 - 4P</code></p>
-                <p>New Supply: <code className="formula">Qs' = (300 + 2P) + 50 = 350 + 2P</code></p>
-                <p>Set Qd' = Qs': <code className="calculation">950 - 4P = 350 + 2P => 600 = 6P => P** = {P_star_q5_ii}</code></p>
-                <p>Substitute P**: <code className="calculation">Q** = 350 + 2*({P_star_q5_ii}) = {Q_star_q5_ii}</code></p>
-                <p><b>New Equilibrium: P** = ${P_star_q5_ii}, Q** = {Q_star_q5_ii} million phones</b></p>
-                 <Alert variant="info" className="interpretation">Simultaneous increases led to P**=${P_star_q5_ii} and Q**={Q_star_q5_ii} million.</Alert>
-
-                <h4>iii. Graphically show old and new equilibria.</h4>
-                <div className="graph-container">
-                    <ResponsiveContainer width="100%" height={400}>
-                         <LineChart margin={{ top: 20, right: 40, left: 10, bottom: 40 }}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                             <XAxis dataKey="Q" type="number" name="Quantity"
-                                label={{ value: 'Quantity (Millions)', position: 'insideBottom', offset: -25 }}
-                                domain={[0, 900]} ticks={[0, 200, 400, Math.round(Q_star_q5), Q_star_q5_ii, 800]} />
-                             <YAxis type="number" name="Price"
-                                label={{ value: 'Price ($)', angle: -90, position: 'insideLeft', offset: -5 }}
-                                domain={[0, 250]} ticks={[0, 50, Math.round(P_star_q5), P_star_q5_ii, 200, 237.5]}/>
-                             <Tooltip />
-                             <Legend verticalAlign="top" />
-
-                             {/* Lines */}
-                             <Line type="linear" dataKey="P" data={q5_D0_Data} stroke="#a9cce3" strokeWidth={1.5} name="D0" dot={false}/>
-                             <Line type="linear" dataKey="P" data={q5_S0_Data} stroke="#f5cba7" strokeWidth={1.5} name="S0" dot={false}/>
-                             <Line type="linear" dataKey="P" data={q5_D1_Data} stroke="#2980b9" strokeWidth={2.5} name="D1" dot={false}/>
-                             <Line type="linear" dataKey="P" data={q5_S1_Data} stroke="#d35400" strokeWidth={2.5} name="S1" dot={false}/>
-
-                            {/* Equilibria */}
-                            <ReferenceLine x={parseFloat(Q_star_q5)} stroke="grey" strokeDasharray="2 2" />
-                            <ReferenceLine y={parseFloat(P_star_q5)} stroke="grey" strokeDasharray="2 2" />
-                            <circle cx={parseFloat(Q_star_q5)} cy={parseFloat(P_star_q5)} r={4} fill="grey" />
-                            <StyledLabel value={`E0`} position="right" fill="grey" x={parseFloat(Q_star_q5)} y={parseFloat(P_star_q5)-10} />
-
-                            <ReferenceLine x={Q_star_q5_ii} stroke="green" strokeDasharray="3 3" />
-                            <ReferenceLine y={P_star_q5_ii} stroke="green" strokeDasharray="3 3" />
-                             <circle cx={Q_star_q5_ii} cy={P_star_q5_ii} r={5} fill="#27ae60" />
-                             <StyledLabel value={`E1`} position="right" fill="green" x={Q_star_q5_ii} y={P_star_q5_ii-10} />
-
-                       </LineChart>
-                    </ResponsiveContainer>
-                    <p>Graph showing original (E0) and new (E1) 5G phone market equilibria.</p>
-                </div>
-
-                <h4>iv. According to the case study, how do increased users and production affect equilibrium?</h4>
-                 <Alert variant="info" className="interpretation">
-                     Increased users shift demand right (raising P and Q). Increased production shifts supply right (lowering P, raising Q). The net effect is a definite increase in Q. The price change depends on the relative shift magnitudes; here, the demand effect on price was stronger, leading to a net price increase (from ≈${P_star_q5} to ${P_star_q5_ii}).
-                </Alert>
-
-                <h4>v. Shortage or surplus if P = ${P_diseq_q5} (using new functions)?</h4>
-                 <p>Use New Functions: Qd' = 950 - 4P; Qs' = 350 + 2P</p>
-                 <p>Find Qd' and Qs' at P=${P_diseq_q5}:</p>
-                 <p><code className="calculation">Qd' = 950 - 4*({P_diseq_q5}) = {Qd_diseq_q5_v}</code></p>
-                 <p><code className="calculation">Qs' = 350 + 2*({P_diseq_q5}) = {Qs_diseq_q5_v}</code></p>
-                 <p>Since Qs' ({Qs_diseq_q5_v}) > Qd' ({Qd_diseq_q5_v}), there is a <span className="emphasis-neg">Surplus</span>.</p>
-                 <p>Size: <code className="calculation">Surplus = {Qs_diseq_q5_v} - {Qd_diseq_q5_v} = {surplus_q5_v} million phones</code></p>
-                  <Alert variant="warning" className="warning">At ${P_diseq_q5} (above the new equilibrium P**=${P_star_q5_ii}), there's a surplus of {surplus_q5_v} million phones.</Alert>
+                      </LineChart>
+                   </ResponsiveContainer>
+                    <p>Graph showing initial (E0) and new (E1) equilibria for cloud market.</p>
+               </div>
             </div>
 
-            <p className="tutorial-end">- END OF TUTORIAL 03 SOLUTIONS -</p>
-        </div>
-    );
+            {/* Question 05 Block */}
+           <div className="question-block">
+               <h2>Question 05: 5G Smartphone Market</h2>
+               <p>Initial: Demand: <code className="formula">Qd = 800 - 4P</code>; Supply: <code className="formula">Qs = 300 + 2P</code></p>
+
+               <h4>i. Find initial equilibrium (P*, Q*).</h4>
+               <p>Set Qd = Qs: <code className="calculation">800 - 4P = 300 + 2P => 500 = 6P => P* = 500/6 ≈ {P_star_q5}</code></p>
+               <p>Substitute P*: <code className="calculation">Q* = 300 + 2*(500/6) ≈ {Q_star_q5}</code></p>
+               <p><b>Initial Equilibrium: P* ≈ ${P_star_q5}, Q* ≈ {Q_star_q5} million phones</b></p>
+
+               <h4>ii. Find new equilibrium after demand increases by 150m, supply increases by 50m.</h4>
+               <p>New Demand: <code className="formula">Qd' = (800 - 4P) + 150 = 950 - 4P</code></p>
+               <p>New Supply: <code className="formula">Qs' = (300 + 2P) + 50 = 350 + 2P</code></p>
+               <p>Set Qd' = Qs': <code className="calculation">950 - 4P = 350 + 2P => 600 = 6P => P** = {P_star_q5_ii}</code></p>
+               <p>Substitute P**: <code className="calculation">Q** = 350 + 2*({P_star_q5_ii}) = {Q_star_q5_ii}</code></p>
+               <p><b>New Equilibrium: P** = ${P_star_q5_ii}, Q** = {Q_star_q5_ii} million phones</b></p>
+                <Alert variant="info" className="interpretation">Simultaneous increases led to P**=${P_star_q5_ii} and Q**={Q_star_q5_ii} million.</Alert>
+
+               <h4>iii. Graphically show old and new equilibria.</h4>
+               <div className="graph-container">
+                   <ResponsiveContainer width="100%" height={400}>
+                        <LineChart margin={{ top: 20, right: 40, left: 10, bottom: 40 }}>
+                           <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="Q" type="number" name="Quantity"
+                               label={{ value: 'Quantity (Millions)', position: 'insideBottom', offset: -25 }}
+                               domain={[0, 900]} ticks={[0, 200, 400, Math.round(Q_star_q5), Q_star_q5_ii, 800]} />
+                            <YAxis type="number" name="Price"
+                               label={{ value: 'Price ($)', angle: -90, position: 'insideLeft', offset: -5 }}
+                               domain={[0, 250]} ticks={[0, 50, Math.round(P_star_q5), P_star_q5_ii, 200, 237.5]}/>
+                            <Tooltip />
+                            <Legend verticalAlign="top" />
+
+                            {/* Lines */}
+                            <Line type="linear" dataKey="P" data={q5_D0_Data} stroke="#a9cce3" strokeWidth={1.5} name="D0" dot={false}/>
+                            <Line type="linear" dataKey="P" data={q5_S0_Data} stroke="#f5cba7" strokeWidth={1.5} name="S0" dot={false}/>
+                            <Line type="linear" dataKey="P" data={q5_D1_Data} stroke="#2980b9" strokeWidth={2.5} name="D1" dot={false}/>
+                            <Line type="linear" dataKey="P" data={q5_S1_Data} stroke="#d35400" strokeWidth={2.5} name="S1" dot={false}/>
+
+                           {/* Equilibria */}
+                           <ReferenceLine x={parseFloat(Q_star_q5)} stroke="grey" strokeDasharray="2 2" />
+                           <ReferenceLine y={parseFloat(P_star_q5)} stroke="grey" strokeDasharray="2 2" />
+                           <circle cx={parseFloat(Q_star_q5)} cy={parseFloat(P_star_q5)} r={4} fill="grey" />
+                           <StyledLabel value={`E0`} position="right" fill="grey" x={parseFloat(Q_star_q5)} y={parseFloat(P_star_q5)-10} />
+
+                           <ReferenceLine x={Q_star_q5_ii} stroke="green" strokeDasharray="3 3" />
+                           <ReferenceLine y={P_star_q5_ii} stroke="green" strokeDasharray="3 3" />
+                            <circle cx={Q_star_q5_ii} cy={P_star_q5_ii} r={5} fill="#27ae60" />
+                            <StyledLabel value={`E1`} position="right" fill="green" x={Q_star_q5_ii} y={P_star_q5_ii-10} />
+
+                      </LineChart>
+                   </ResponsiveContainer>
+                   <p>Graph showing original (E0) and new (E1) 5G phone market equilibria.</p>
+               </div>
+
+               <h4>iv. According to the case study, how do increased users and production affect equilibrium?</h4>
+                <Alert variant="info" className="interpretation">
+                    Increased users shift demand right (raising P and Q). Increased production shifts supply right (lowering P, raising Q). The net effect is a definite increase in Q. The price change depends on the relative shift magnitudes; here, the demand effect on price was stronger, leading to a net price increase (from ≈${P_star_q5} to ${P_star_q5_ii}).
+               </Alert>
+
+               <h4>v. Shortage or surplus if P = ${P_diseq_q5} (using new functions)?</h4>
+                <p>Use New Functions: Qd' = 950 - 4P; Qs' = 350 + 2P</p>
+                <p>Find Qd' and Qs' at P=${P_diseq_q5}:</p>
+                <p><code className="calculation">Qd' = 950 - 4*({P_diseq_q5}) = {Qd_diseq_q5_v}</code></p>
+                <p><code className="calculation">Qs' = 350 + 2*({P_diseq_q5}) = {Qs_diseq_q5_v}</code></p>
+                <p>Since Qs' ({Qs_diseq_q5_v}) > Qd' ({Qd_diseq_q5_v}), there is a <span className="emphasis-neg">Surplus</span>.</p>
+                <p>Size: <code className="calculation">Surplus = {Qs_diseq_q5_v} - {Qd_diseq_q5_v} = {surplus_q5_v} million phones</code></p>
+                 <Alert variant="warning" className="warning">At ${P_diseq_q5} (above the new equilibrium P**=${P_star_q5_ii}), there's a surplus of {surplus_q5_v} million phones.</Alert>
+           </div>
+
+           <p className="tutorial-end">- END OF TUTORIAL 03 SOLUTIONS -</p>
+       </div>
+   );
 }
 
 export default TutorialSolutions;

@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
+/* Global Styles */
+:root {
+  --primary-color: #a70e0e; /* Darker Red from slide template */
+  --secondary-color: #d35400; /* Orange accent */
+  --text-color: #343a40;
+  --bg-color: #f4f6f8; /* Slightly off-white background */
+  --card-bg: #ffffff;
+  --heading-color: #2c3e50; /* Dark blue-grey */
+  --accent-color: #2980b9; /* Blue accent */
+  --success-color: #27ae60; /* Green */
+  --warning-color: #f39c12; /* Yellow/Orange Warning */
+  --danger-color: #c0392b;  /* Darker Red for negative/danger */
+  --border-color: #e0e0e0;
+  --code-bg: #e9ecef;
+  --graph-bg: #fdfdfd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+line-height: 1.7;
+background-color: var(--bg-color);
+color: var(--text-color);
+padding-top: 20px;
+padding-bottom: 40px; /* More space at bottom */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Use Bootstrap container for main layout - centered */
+.container-lg { /* Targeting the bootstrap class used in App.js */
+background-color: var(--card-bg);
+padding: 30px 40px;
+border-radius: 12px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+border-top: 6px solid var(--primary-color);
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .container-lg {
+      padding: 20px 25px;
+      margin-left: 10px;
+      margin-right: 10px;
   }
+   h1 { font-size: 2em; }
+   h2 { font-size: 1.7em; }
+   h3 { font-size: 1.4em; }
+   .table-responsive-sm { font-size: 0.9em; } /* Adjust table font on small screens */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+h1, h2, h3, h4 {
+color: var(--heading-color);
+margin-top: 1.8em;
+margin-bottom: 1em;
+padding-bottom: 8px;
+font-weight: 600; /* Bolder headings */
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+text-align: center;
+font-size: 2.6em;
+color: var(--primary-color);
+border-bottom: none;
+margin-bottom: 1em;
+font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+font-size: 2.1em;
+border-bottom: 3px solid var(--primary-color);
+color: var(--primary-color); /* Make H2 also primary color */
+}
+
+h3 {
+font-size: 1.7em;
+border-bottom: 2px solid var(--secondary-color);
+color: var(--secondary-color);
+}
+h4 {
+  font-size: 1.4em;
+  color: var(--accent-color);
+  border-bottom: none;
+  margin-top: 1.5em;
+  font-weight: 600;
+}
+
+
+/* Text Emphasis Styles */
+.key-term {
+font-weight: bold;
+color: var(--secondary-color);
+}
+
+.concept {
+font-weight: 600;
+color: var(--accent-color);
+}
+
+.important {
+font-weight: bold;
+background-color: rgba(255, 224, 130, 0.5); /* Lighter yellow highlight */
+padding: 3px 8px;
+border-radius: 4px;
+border: 1px solid rgba(255, 213, 79, 0.8);
+display: inline-block;
+}
+
+.emphasis {
+font-weight: bold;
+color: var(--success-color);
+}
+
+.emphasis-neg {
+font-weight: bold;
+color: var(--danger-color);
+}
+
+.ceteris-paribus {
+font-style: italic;
+color: #7f8c8d;
+}
+
+/* Code and Calculation Styles */
+.formula, code {
+font-family: 'Consolas', 'Monaco', 'Courier New', Courier, monospace;
+background-color: var(--code-bg);
+padding: 4px 8px;
+border-radius: 4px;
+border: 1px solid var(--border-color);
+display: inline-block;
+color: #495057;
+font-size: 0.95em;
+word-break: break-word; /* Prevent long code from overflowing */
+}
+
+.calculation {
+font-family: 'Consolas', 'Monaco', 'Courier New', Courier, monospace;
+background-color: #e7f3fe; /* Lighter blue background */
+padding: 12px 15px;
+border-radius: 5px;
+border: 1px solid #b3d7ff; /* Lighter blue border */
+margin: 12px 0;
+display: block;
+overflow-x: auto;
+color: #004085; /* Dark blue text */
+font-size: 0.95em;
+}
+
+/* Interpretation and Warning Styles (Using Bootstrap Alert look) */
+.interpretation, .alert-success { /* Reuse Bootstrap class */
+background-color: #d4edda;
+border-left: 5px solid #28a745;
+padding: 12px 18px;
+margin: 15px 0;
+color: #155724;
+font-style: italic;
+border-radius: 0 5px 5px 0;
+}
+
+.warning, .alert-warning { /* Reuse Bootstrap class */
+background-color: #fff3cd;
+border-left: 5px solid #ffc107;
+padding: 12px 18px;
+margin: 15px 0;
+color: #856404;
+font-style: italic;
+ border-radius: 0 5px 5px 0;
+}
+.alert-info { /* For general info messages */
+background-color: #d1ecf1;
+border-left: 5px solid #0dcaf0;
+ padding: 12px 18px;
+margin: 15px 0;
+color: #055160;
+ border-radius: 0 5px 5px 0;
+}
+
+
+/* List Styles */
+ul, ol {
+margin-left: 15px; /* Adjust indentation */
+padding-left: 20px;
+}
+li {
+margin-bottom: 14px; /* Slightly more spacing */
+padding-left: 5px;
+}
+
+/* Definition Block Style */
+.definition {
+color: #444; /* Slightly darker text */
+margin: 12px 0 12px 25px; /* More indentation */
+border-left: 5px solid var(--accent-color);
+padding: 12px 18px;
+background-color: #eaf2f8; /* Lighter blue background */
+border-radius: 0 6px 6px 0;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Graph Container Style */
+.graph-container {
+text-align: center;
+margin: 40px auto;
+padding: 25px;
+border: 1px solid var(--border-color);
+border-radius: 10px;
+background-color: var(--graph-bg);
+max-width: 800px; /* Slightly wider */
+overflow-x: auto;
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Table Styles */
+.table { /* Target Bootstrap tables */
+margin-top: 25px;
+box-shadow: 0 3px 7px rgba(0,0,0,0.07);
+}
+
+.table thead th {
+background-color: var(--heading-color);
+color: white;
+font-weight: 600;
+border-color: #454d55; /* Darker border for header */
+}
+
+.schedule-table {
+max-width: 550px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.calculation-table td:first-child {
+font-weight: bold;
+background-color: #f8f9fa;
+min-width: 100px;
+width: 25%; /* Give step description more space */
+vertical-align: top; /* Align step description to top */
+}
+
+/* Tutorial Section Styles */
+.tutorial-intro, .tutorial-end {
+text-align: center;
+font-size: 1.4em;
+font-weight: bold;
+margin: 45px 0;
+color: var(--primary-color);
+padding-bottom: 10px;
+border-bottom: 2px dashed var(--primary-color);
+}
+
+.question-block {
+border: 1px solid var(--border-color);
+padding: 30px;
+margin-top: 40px;
+margin-bottom: 40px;
+border-radius: 10px;
+background-color: #ffffff;
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+border-left: 5px solid var(--accent-color); /* Add accent border */
+}
+.question-block h2 { /* Style Q titles */
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+  font-size: 1.9em;
+}
+
+/* Recharts Fine-tuning */
+.recharts-tooltip-wrapper {
+background-color: rgba(255, 255, 255, 0.95) !important;
+border: 1px solid #aaa !important;
+border-radius: 5px;
+padding: 8px 12px !important;
+box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.recharts-legend-item {
+  margin-right: 15px !important; /* Space out legend items */
+}
+.recharts-cartesian-axis-tick-value {
+  font-size: 11px; /* Smaller axis ticks */
+}
+.recharts-label {
+  font-size: 13px; /* Control label size */
+}
+
+/* Utility */
+hr {
+  margin: 50px 0;
+  border: none;
+  border-top: 3px double var(--primary-color);
+  opacity: 0.5;
 }
